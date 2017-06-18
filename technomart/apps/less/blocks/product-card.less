@@ -1,0 +1,148 @@
+.product-card{
+  .size(216px; 316px);
+  position: relative;
+  font-family: @font-family-PTSans;
+  border: 2px solid #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+   &:hover{
+    box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
+   }
+   &:hover .product-card__active{
+     display: flex;
+   }
+   &--new .product-card__new{
+     display: block;
+   }
+   &--new:hover .product-card__active{
+     background: white url("../img/new-flag.png") no-repeat 160px 0;
+   }
+   &__new{
+     position: absolute;
+     right: 0;
+     top: 0;
+     height: 60px;
+     width: 60px;
+     background: url("../img/new-flag.png") no-repeat;
+     display: none;
+   }
+   &__image{
+     height: 164px;
+     width: inherit;
+     display: flex;
+      & img{
+        margin: auto;
+      }
+   }
+   &__info{
+     height: 120px;
+     padding: 15px 0;
+     padding-bottom: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+   }
+   &__name{
+     display: block;
+     text-align: center;
+     padding: 0 20px;
+     font-family: inherit;
+     font-weight: bold;
+     font-size: 18px;
+     line-height: 20px;
+     text-decoration: none;
+     color: black;
+   }
+   &__old-price{
+     font-weight: bold;
+     font-size: 17px;
+     line-height: 18px;
+     color: #999999;
+     text-decoration: line-through;
+     text-align: center;
+   }
+   &__price{
+     display: inline-block;
+     font-weight: bold;
+     font-size: 17px;
+     line-height: 18px;
+     color: white;
+     padding: 10px 37px;
+     padding-right: 17px;
+     background-color: #ee3643;
+     border-radius: 3px;
+     position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        .square(25px);
+        background: #ee3643;
+        top: 6px;
+        right: -12px;
+        transform: rotate(45deg);
+      }
+   }
+   &__active{
+     height: 164px;
+     background-color: white;;
+     position: absolute;
+     box-sizing: border-box;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     align-items: center;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 46px 42px 37px;
+     display: none;
+   }
+   &__buy-link{
+     .link-button();
+     background-color: #63a63e;
+     box-shadow: 0px -3px 0px 0px rgba(54, 115, 21, 1) inset;
+     border-radius: 3px;
+     width: 135px;
+     padding-left: 5px;
+     padding-top: 11px;
+     padding-bottom: 9px;
+     position: relative;
+     &::before{
+       content: "\62";
+       text-transform: none;
+       font-family: "symbols-technomart";
+       position: absolute;
+       color: rgba(255,255,255, 0.3);
+       top: 10px;
+       left: 16px;
+     }
+     &:hover{
+       background-color: #5fbb2d;
+     }
+     &:hover::before{
+       color: white;
+     }
+     &:focus{
+       background-color: #518534;
+     }
+   }
+   &__bookmark-link{
+     .link-button();
+     background-color: white;
+     color: black;
+     width: 135px;
+     border-radius: 3px;
+     border: 3px solid #63a63e;
+     padding: 8px 0 6px;
+     &:hover{
+      border-color: #32425c;
+     }
+     &:focus{
+      border-color: #c1c6ce;
+      color: #c1c6ce;
+     }
+   }
+}

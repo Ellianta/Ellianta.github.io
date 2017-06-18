@@ -1,0 +1,237 @@
+.catalog{
+  font-family: @font-family-cuprum;
+  color: black;
+  background-color: white;
+  &__wrapper{
+    width: 940px;
+    .center-block();
+    padding: 0 10px;
+  }
+  &__bread-crumbs{
+    height: 58px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__link{
+    font-family: @font-family-PTSans;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding: 20px 0;
+    padding-right: 39px;
+     &:first-child::before{
+       content: "\1f3e0";
+       font-family: "symbols-technomart";
+       font-size: 17px;
+       opacity: 0.3;
+     }
+     &:not(:last-child)::after{
+       content: "\3e";
+       font-family: "symbols-technomart";
+       font-size: 14px;
+       opacity: 0.3;
+       position: absolute;
+       right: 15px;
+     }
+  }
+  &__header{
+    width: inherit;
+    background-color: #f2f6f8;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  &__title{
+    color: #32425c;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 30px 0;
+    padding-left: 30px;
+    font-weight: 400;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__filter{
+    width: 220px;
+  }
+  &__content{
+    width: 700px;
+  }
+  &__sort{
+    width: inherit;
+    height: 38px;
+    border-radius: 3px;
+    background-color: #f7f3ec;
+    display: flex;
+    justify-content: space-between;
+    font-family: @font-family-PTSans;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 20px;
+     &-list{
+       list-style: none;
+       width: 620px;
+       padding: 0;
+       margin: 0;
+       display: flex;
+       justify-content: flex-end;
+     }
+     &-title{
+       margin-right: auto;
+       padding: 10px 20px;
+     }
+     &-item{
+       opacity: 0.5;
+       cursor: pointer;
+       padding: 10px 20px;
+       padding-left: 55px;
+       text-decoration: underline;
+       text-decoration-color: #ee3643;
+       text-decoration-style: dotted;
+
+        &--active{
+          color: #ee3643;
+          opacity: 1;
+          text-decoration: none;
+        }
+        &:hover{
+          opacity: 1;
+        }
+     }
+     &-toggles{
+       list-style: none;
+       padding: 0 14px;
+       margin: 0;
+       width: 44px;
+       display: flex;
+       justify-content: space-between;
+     }
+   }
+  &__toggle{
+    position: relative;
+    width: 12px;
+    height: 38px;
+      &--down{
+        &::after{
+            content: "\25bc";
+            cursor: pointer;
+            position: absolute;
+            font-family: "symbols-technomart";
+            color: black;
+            opacity: 0.5;
+            font-size: 20px;
+            top: 10px;
+          }
+        }
+      &--up{
+        &::after{
+            cursor: pointer;
+            content: "\25b2";
+            position: absolute;
+            font-family: "symbols-technomart";
+            color: black;
+            opacity: 0.5;
+            font-size: 20px;
+            top: 10px;
+          }
+        }
+      &--active::after{
+        color: #ee3643;
+        opacity: 1;
+      }
+      &:hover::after{
+        opacity: 1;
+      }
+     }
+
+  &__product-cards{
+    width: inherit;
+    min-height: 994px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 52px;
+  }
+  &__nav{
+    height: 38px;
+    width: auto;
+    margin-bottom: 60px;
+  }
+  &__nav-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    font-family: @font-family-PTSans;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: black;
+  }
+  &__page{
+    width: 34px;
+    height: 34px;
+    border: 2px solid #f7f3ec;
+    display: flex;
+    margin-right: 10px;
+    border-radius: 3px;
+     &--active{
+       background-color: #ee3643;
+       border-color: #ee3643;
+     }
+     &:last-of-type{
+       min-width: 136px;
+     }
+  }
+  &__active-page{
+    margin: auto;
+    color: white;
+  }
+  &__nav-link{
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: black;
+    margin: auto;
+  }
+
+  &__footer{
+    min-height: 260px;
+    width: 100%;
+    background-color: #f2f6f8;
+  }
+  &__footer-title{
+    color: #32425c;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 24px;
+    margin: 0;
+    padding:0;
+    padding-top: 68px;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  &__description{
+    font-family: @font-family-PTSans;
+    color: black;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+  }
+
+}

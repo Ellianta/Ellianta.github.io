@@ -1,0 +1,113 @@
+#slider-delivery:checked ~ .serv-slider__controls>.serv-slider__control--delivery,
+#slider-guarantee:checked ~ .serv-slider__controls>.serv-slider__control--guarantee,
+#slider-credit:checked ~ .serv-slider__controls>.serv-slider__control--credit{
+  background-color: white;
+  color: #32425c;
+}
+#slider-delivery:checked ~ .serv-slider__slides .serv-slider__slide--delivery,
+#slider-guarantee:checked ~ .serv-slider__slides .serv-slider__slide--guarantee,
+#slider-credit:checked ~ .serv-slider__slides .serv-slider__slide--credit{
+  z-index: 1;
+  opacity: 1;
+}
+
+.serv-slider{
+  height: 285px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
+
+  &__toggle{
+    display: none;
+  }
+  &__separator{
+    position: absolute;
+    .size(10px; 272px);
+    left: 230px;
+    top: 7px;
+    background: url("../img/serv-slide-bg.png") 50% 50%;
+  }
+  &__controls{
+    width: 240px;
+    height: 183px;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+  &__control{
+    cursor: pointer;
+    width: 217px;
+    display: block;
+    height: 60px;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 15px 0;
+    padding-left: 23px;
+    background-color: #32425c;
+    color: white;
+    &:hover{
+      background-color: #293449;
+    }
+  }
+  &__slides{
+    order: 2;
+    width: 620px;
+    position: relative;
+  }
+  &__slide{
+    position: absolute;
+    height: 285px;
+    width: inherit;
+    z-index: 0;
+    opacity: 0;
+  }
+  &__slide--delivery{
+    background: url("../img/delivery.png") no-repeat 100% 50%;
+  }
+  &__slide--guarantee{
+    background: url("../img/guarantee.png") no-repeat 100% 50%;
+  }
+  &__slide--credit{
+    background: url("../img/credit.png") no-repeat 115% 50%;
+    ::after{
+      content: "";
+      position: absolute;
+      left: 620px;
+      top: 0;
+      width: 25px;
+      height: 285px;
+      background: url("../img/credit.png") no-repeat 100% 50%;
+    }
+  }
+  &__title{
+    padding: 0;
+    margin: 0;
+    font-size: 36px;
+    line-height: 33px;
+    color: #32425c;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+  }
+  &__description{
+    font-family: @font-family-PTSans;
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+  &__link{
+    .link-button();
+    .button-bg();
+    min-width: 196px;
+  }
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,27 @@
+.main-nav{
+  width: 100%;
+  min-height: 62px;
+  background-color: #32425c;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+   &__link{
+     .link();
+     padding: 21px 30px 24px;
+     &:first-child{
+       padding-left: 53px;
+     }
+     &:last-child{
+       padding-right: 55px;
+     }
+     &:hover{
+       background-color: #293449;
+     }
+     &:focus{
+       background-color: #1d2739;
+       color: #6b717a;
+     }
+   }
+
+}

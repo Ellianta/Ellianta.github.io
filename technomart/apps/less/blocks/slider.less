@@ -1,0 +1,112 @@
+#slide1:checked ~ .slider__controls .slider__control--first,
+#slide2:checked ~ .slider__controls .slider__control--second{
+  background: #ee3643;
+}
+#slide1:checked ~ .slider__inner .slider__slide--first,
+#slide2:checked ~ .slider__inner .slider__slide--second{
+  z-index: 1;
+  opacity: 1;
+}
+#slide1:checked ~ .slider__controls .slider__control--first::after,
+#slide2:checked ~ .slider__controls .slider__control--second::after,{
+  opacity: 0.2;
+  cursor: auto;
+}
+
+.slider{
+   background-color: black;
+   color: white;
+   position: relative;
+   width: 620px;
+   height: 266px;
+   font-family: @font-family-cuprum;
+    &__toggle{
+      display: none;
+    }
+    &__slide{
+      position: absolute;
+      opacity: 0;
+      z-index: 0;
+      width: 620px;
+      height: 266px;
+       &--first{
+         background: black url("../img/slide1.png");
+       }
+       &--second{
+         background: black url("../img/slide2.png");
+       }
+    }
+    &__header{
+      height: 110px;
+      padding: 25px 0;
+      padding-left: 26px;
+    }
+    &__title{
+      margin: 0;
+      padding: 0;
+      font-size: 36px;
+      line-height: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    &__slogan{
+      font-family: @font-family-PTSans;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &__controls{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 30px;
+      height: 10px;
+      bottom: 36px;
+      left: 50%;
+      margin-left: -15px;
+      z-index: 2;
+    }
+    &__control{
+      background: white;
+      width: 6px;
+      height: 6px;
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+       &--first{
+         &::after{
+           content: "\3c";
+           position: absolute;
+           font-family: "symbols-technomart";
+           font-size: 45px;
+           left: -270px;
+           bottom: 70px;
+           cursor: pointer;
+         }
+       }
+       &--second{
+         &::after{
+           content: "\3e";
+           position: absolute;
+           font-family: "symbols-technomart";
+           font-size: 45px;
+           right: -272px;
+           bottom: 70px;
+           cursor: pointer;
+         }
+       }
+    }
+
+
+
+    &__link{
+      position: absolute;
+      .link-button();
+      .button-bg();
+      min-width: 195px;
+      z-index: 4;
+      bottom: 22px;
+      left: 25px;
+    }
+ }

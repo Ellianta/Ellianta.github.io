@@ -1,0 +1,174 @@
+.page-header{
+  min-height: 320px;
+  background-color: #f1f5f7;
+  font-family: @font-family-cuprum;
+   &__inner{
+     width: 940px;
+     padding: 0 10px;
+     .center-block();
+   }
+   &__content{
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     padding-top: 44px;
+     min-height: 113px;
+   }
+   &__description{
+     font-style: italic;
+     font-size: 16px;
+     line-height: 23px;
+     color: #ee3643;
+     width: 200px;
+     padding: 5px 50px;
+   }
+   &__contacts{
+     width: 300px;
+   }
+   &__phone{
+     width: 196px;
+     height: 29px;
+     border: 3px solid white;
+     padding-top: 12px;
+     padding-left: 70px;
+     color: #e9292a;
+     font-size: 21px;
+     line-height: 18px;
+     position: relative;
+      &::before{
+        content: "\1f4de";
+        font-family: "symbols-technomart";
+        position: absolute;
+        font-size: 22px;
+        color: #b8c0c9;
+        top: 13px;
+        left: 15px;
+      }
+   }
+   &__adress{
+     margin: 0;
+     padding: 5px 0;
+     padding-left: 10px;
+     color: #32425c;
+     font-size: 14px;
+     line-height: 24px;
+   }
+   &__user-block{
+     width: 300px;
+     display: flex;
+     justify-content: flex-end;
+     position: relative;
+   }
+   &__user-in{
+     position: absolute;
+   }
+   &__user{
+     display: block;
+     background-color: white;
+     text-decoration: none;
+     color: black;
+     font-size: 21px;
+     line-height: 18px;
+     height: 20px;
+     min-width: 253px;
+     padding: 15px 0 11px;
+     padding-left: 47px;
+     position: relative;
+      &::before{
+        content: "\1f468";
+        font-family: "symbols-technomart";
+        position: absolute;
+        color: #32425c;
+        left: 15px;
+        opacity: 0.2;
+      }
+      &::after{
+        content: "\241b";
+        font-family: "symbols-technomart";
+        position: absolute;
+        color: #32425c;
+        font-size: 23px;
+        right: 10px;
+        opacity: 0.2;
+      }
+      &:hover::before,
+      &:hover::after{
+        opacity: 1;
+      }
+      &:focus{
+        color: rgba(0,0,0,0.2);
+      }
+      &:focus::before,
+      &:focus::after{
+        opacity: 0.2;
+      }
+
+   }
+   &__my-orders,
+   &__my-private{
+     display: inline-block;
+     width: 115px;
+     text-align: center;
+     text-decoration: underline;
+     font-size: 16px;
+     line-height: 18px;
+     padding-top: 8px;
+     color: #32425c;
+     position: relative;
+      &:hover{
+        color: #ee3643;
+      }
+      &:focus{
+        color: rgba(50,66,92,0.2);
+      }
+   }
+   &__my-orders{
+     &::after{
+       content: "";
+       position: absolute;
+       width: 4px;
+       height: 4px;
+       background-color: #32425c;
+       right: 3px;
+       top: 16px;
+       border-radius: 50%;
+     }
+   }
+   &__login,
+   &__check-in{
+     display: block;
+     background-color: white;
+     text-decoration: none;
+     color: black;
+     font-size: 21px;
+     line-height: 18px;
+     height: 20px;
+     padding: 15px 25px 11px;
+     &--hidden{
+       display: none;
+     }
+     &:hover{
+       color: #ee3643;
+     }
+     &:focus{
+       color: #dcdcdc;
+     }
+   }
+   &__login{
+     padding-left: 50px;
+     margin-right: 10px;
+     position: relative;
+      &::before{
+        content: "\2386";
+        font-family: "symbols-technomart";
+        position: absolute;
+        font-size: 22px;
+        color: #c5c5c5;
+        top: 17px;
+        left: 17px;
+      }
+      &:hover::before{
+        color: #32425c;
+      }
+   }
+}

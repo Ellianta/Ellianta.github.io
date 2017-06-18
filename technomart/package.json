@@ -1,0 +1,26 @@
+{
+  "name": "technomart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ellianta/technomart.git"
+  },
+  "author": "Ellianta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ellianta/technomart/issues"
+  },
+  "homepage": "https://github.com/Ellianta/technomart#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
