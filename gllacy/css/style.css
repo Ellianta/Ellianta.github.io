@@ -883,6 +883,7 @@ img {
 }
 .map__phone {
   line-height: 24px;
+  font-weight: 400;
 }
 .map__bold {
   font-size: 18px;
