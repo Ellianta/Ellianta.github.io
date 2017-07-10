@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/style-min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <title>Sedona</title>
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"   style="display:none">
+    <symbol id="htmlacademy" viewBox="0 0 27 34">
+      <image width="27" height="34" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAQAAAAEqGq7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBwIPKSx0J8IpAAABuklEQVQ4y5WVa3WtQAyFP2rgjoOOBCQgAQlIQAIOkIAEJEwdUAdQBdMqSH9MmBfQ3mbWYh0eO9l57JyGYIYWaDG8YoGO096Agw8+eQfe5ROgwWGx/MUOjgaJt+qPLw4O4I0OsFj+RS7RBKF7jifFwdIhSIjWPDOSy5NG4OXx+4Gd/id3V4ctTlk5rNRE0yUzw4IgTFhm/WV+g434EKOI6xmeYR0bUmck0LMjONorLFEzZZr66YRHWDA5bKqoBbN537AsCJ4xweS22I6lrKOmEWGupgbAhOCZqvJveTRHewMbcQg7XYy259FCOeYqpkNYGNkRVjrWED2vZGDtGTJYr0WYtO2XSp5T6Au6Dqc0NZH7dq+M6nfBRDfb7zDBMeg4jZhI7kdYp22fdTLr8wBzbAyxDNP/wno8wsrAhrDFHoUTVXAVTsjGM11ozklz6ZK3udXJ6GO0KBlBwCTYXrT5LH1BTUGDOtPq1VMZ6M75OogbxjMFXa0pg7sNJWQ9XLGpGOds+4ruSc1rMqcWCqGEl1v2x5GkWSivNKsSOqfSZPelzi+WvC8p+mXF3tqYNWC8DucT7KS3lPs4nW9havApPBXe1wAAAABJRU5ErkJggg=="/>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 9 18">
+     <image width="9" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAASCAQAAAAjiTzDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBwIPKSx0J8IpAAAAW0lEQVQY07WNQRGAMBADt0wFVEolnCRwAMpAAg6QgITwuMK0ffXD/rKTSRBCaNalgotVFa7uWkUgk3A2DkDIvoIJETEyLwmDINExwYAKMmAvaeH0R9rHsa2f1QOaa0/UgAJXogAAAABJRU5ErkJggg=="/>
+   </symbol>
+   <symbol id="twitter" viewBox="0 0 18 14">
+     <image width="18" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOCAQAAACI04Q8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBwIPKSx0J8IpAAAAm0lEQVQoz32RURWCQBRE7yHBRiACEYyADYhABBpwTEAENAERtAE2gAbXDxTdFbj7OztnZh4GgySvcVJ1MFhaYePdIpJ0xrTYqJP1KilMGTNmINAyUpEDJTEPzunPyTHxaQT7d8g9TpJxI3DEDFttotAiGXDhuetzhcUpHKTKRZZtyr9Oa7OvaFvWfQbGftPl9wZgsEq2Gqzjo78AGIVMdBRlPCcAAAAASUVORK5CYII="/></symbol>
+     <symbol id="youtube" viewBox="0 0 20 14">
+       <image width="20" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAQAAACFzfR7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBwIPKSx0J8IpAAAAZklEQVQoz63SQRGAMAxE0V8GAZWAhErAQpWABFDaOigOljNtZpoDe8y8Q7ITlFQ0S1EKKmzMU4PkYMDiYyPM3Dym7NbehaIutf4eC2Jh946rMYucHMTvsK8nk0ZkwT96rC5X8T7FC+C9oZoMbr76AAAAAElFTkSuQmCC"/>
+     </symbol>
+
+     <symbol id="fullscreen" viewBox="0 0 20 20"><image width="20" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEVcaHD///9caHBcaHAAAACORv/AAAAAA3RSTlMAAECMqoVOAAAAAWJLR0QEj2jZUQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+EHCBEZOiawL5UAAAAwSURBVAjXYzA2NmYAAhCFg2mkBGIyCAOZBgxYmDAgKEgFppIChCmkhMM2ZCYBpwMAbtUMq+lww0YAAAAASUVORK5CYII="/></symbol>
+
+     <symbol id="replay" viewBox="0 0 16 20"><image width="16" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUBAMAAAB2TKBEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAIVBMVEVcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHAAAADCaybdAAAACXRSTlMAn79gzyBA7zAf34+UAAAAAWJLR0QKaND0VgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+EHCBEaA1KY9F4AAABgSURBVAjXY2BgYGBkgAJJKM04EyYwEyYwc6YyjDHTFSKVrDk9AKKYeaYDVLvlZAaIgUyToEYww8xim8kwMwHGMIBKaSqAGEDFEI1AkgUkBzKQtXKSWTPYihC4pUZgZwAAn6MayDSFYhcAAAAASUVORK5CYII="/></symbol>
+
+     <symbol id="subtitles" viewBox="0 0 32 20"><image width="32" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUBAMAAAAevyJ8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEVcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHBcaHAAAABghkN7AAAADnRSTlMAEL+fUCAwQM/vgGDfcBFIAP0AAAABYktHRA8YugDZAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QcIERk1tg8yBAAAAHpJREFUGNNjEHqHAhQZ9FAFHjG8QwM4BEzCKt7NKqyGC7xmYOB4E8DAChdYkPHu3XPueQgtAkCrGiIRZrxgBKnahxB4xA4SWIdPgAFNC8RQSSSBBULvZj5jO/cGLvCMgZH5hQAjwzy4083DPN7NLaxGCOD1LUYAoQchAGHzAu8jwPAnAAAAAElFTkSuQmCC"/></symbol>
+  </svg>
+  <div class="wrapper">
+    <header class="inner-page-header">
+
+     <nav class="main-nav">
+         <div class="main-nav__logo"></div>
+         <div class="main-nav__toggle"></div>
+         <div class="main-nav__toggle-close"></div>
+       <div class="main-nav__inner">
+       <a class="main-nav__link" href="index.html">Главная</a>
+       <a class="main-nav__link    main-nav__link--active" href="#">Фото и видео</a>
+       <a class="main-nav__link  main-nav__link--center"></a>
+       <a class="main-nav__link" href="form.html">Форма отзыва</a>
+       <a class="main-nav__link  main-nav__link" href="#">HTML Academy</a>
+       </div>
+     </nav>
+
+     <div class="inner-page-header__logo">
+       <img class="inner-page-header__image" src="img/sedona.svg" alt="SEDONA">
+     </div>
+
+     <div class="inner-page-header__triangle"></div>
+
+    </header>
+
+    <main class="inner-page">
+      <section class="inner-page__header">
+        <h1 class="inner-page__title">
+          Фото и видео
+        </h1>
+        <p class="inner-page__description">
+        Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
+      </section>
+
+    <div class="inner-page__images">
+
+      <section class="image">
+        <picture class="image__picture">
+          <source media="(min-width: 1200px)"
+                  srcset="img/content/1-desktop.png">
+          <source media="(min-width: 768px)"
+                  srcset="img/content/1-tablet.png">
+          <img src="img/content/1-mobile.png" alt="Закат">
+        </picture>
+
+        <div class="image__info">
+          <div class="image__about">
+          <b class="image__title">
+            Неродные просторы
+          </b>
+          <span class="image__author">
+            Автор фото: Борис
+          </span>
+        </div>
+        <span class="image__likes">1350</span>
+        </div>
+
+      </section>
+
+      <div class="image__inner">
+
+      <section class="image">
+        <picture class="image__picture">
+          <source media="(min-width: 1200px)"
+                  srcset="img/content/2-desktop.png">
+          <source media="(min-width: 768px)"
+                  srcset="img/content/2-tablet.png">
+          <img src="img/content/2-mobile.png" alt="Кактус">
+        </picture>
+
+        <div class="image__info">
+          <div class="image__about">
+          <b class="image__title">
+            Местная растительность
+          </b>
+          <span class="image__author">
+            Автор фото: Сергей
+          </span>
+          </div>
+          <span class="image__likes">143</span>
+        </div>
+      </section>
+
+      <section class="image">
+        <picture class="image__picture">
+          <source media="(min-width: 1200px)"
+                  srcset="img/content/3-desktop.png">
+          <source media="(min-width: 768px)"
+                  srcset="img/content/3-tablet.png">
+          <img src="img/content/3-mobile.png" alt="Дорога на север">
+        </picture>
+
+        <div class="image__info">
+          <div class="image__about">
+          <b class="image__title">
+            Дорога на север
+          </b>
+          <span class="image__author">
+            Автор фото: Петр
+          </span>
+          </div>
+          <span class="image__likes">96</span>
+        </div>
+      </section>
+
+      <section class="image">
+        <picture class="image__picture">
+          <source media="(min-width: 1200px)"
+                  srcset="img/content/4-desktop.png">
+          <source media="(min-width: 768px)"
+                  srcset="img/content/4-tablet.png">
+          <img src="img/content/4-mobile.png"  alt="Мост дьявола">
+        </picture>
+
+        <div class="image__info">
+          <div class="image__about">
+          <b class="image__title">
+            Мост дьявола
+          </b>
+          <span class="image__author">
+            Автор фото: Антон
+          </span>
+          </div>
+          <span class="image__likes">254</span>
+        </div>
+      </section>
+
+      </div>
+
+    </div>
+
+    <div class="inner-page__video">
+      <b class="inner-page__title">
+       Все еще сомневаетесь?
+      </b>
+      <p class="inner-page__description">
+        Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+      </p>
+      <div class="video">
+      <picture class="video__poster">
+        <source media="(min-width: 1200px)"
+                srcset="img/content/video-desktop.png">
+        <source media="(min-width: 768px)"
+                srcset="img/content/video-tablet.png">
+        <img src="img/content/video-mobile.png" alt="Вид седоны">
+      </picture>
+
+      <div class="video__control">
+       <div class="video__scale">
+        <div class="video__bar"></div>
+        <div class="video__toggle"></div>
+       </div>
+       <div class="video__btns">
+
+        <picture class="video__replay">
+          <source media="(min-width: 768px)"
+                  srcset="img/icons/replay.svg">
+         <img width="16" height="20" src="img/icons/replay1.svg">
+        </picture>
+
+        <picture class="video__subtitles">
+          <source media="(min-width: 768px)"
+                  srcset="img/icons/subtitles.svg">
+         <img width="32" height="20" src="img/icons/subtitles1.svg">
+           </picture>
+
+         <picture class="video__fullscreen">
+           <source media="(min-width: 768px)"
+                   srcset="img/icons/fullscreen.svg">
+         <img width="20" height="20" src="img/icons/fullscreen1.svg">
+           </picture>
+
+        </div>
+
+      </div>
+      </div>
+    </div>
+
+
+    </main>
+
+    <footer class="page-footer">
+     <div class="page-footer__inner">
+      <section class="page-footer__hashtag">
+        <a href="#" class="page-footer__hash-link">
+          #visitsedona
+        </a>
+      </section>
+
+      <section class="social">
+        <a class="social__link  social__link--twitter" href="#">
+          twitter
+          <svg  class="social__icon" width="18" height="14">
+            <use xlink:href="#twitter"></use>
+          </svg>
+        </a>
+
+        <a class="social__link  social__link--facebook" href="#">
+          facebook
+          <svg  class="social__icon" width="9" height="18">
+            <use xlink:href="#facebook"></use>
+          </svg>
+        </a>
+        <a class="social__link  social__link--youtube" href="#">
+          youtube
+          <svg  class="social__icon" width="20" height="14">
+            <use xlink:href="#youtube"></use>
+          </svg>
+        </a>
+      </section>
+
+      <section class="page-footer__developed">
+        разработано
+        <a href="https://htmlacademy.ru/">
+          <svg  class="page-footer__logo" width="27" height="34">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
+     </section>
+     </div>
+    </footer>
+  </div>
+<script src="js/nav.js"></script>
+</body>
+</html>
